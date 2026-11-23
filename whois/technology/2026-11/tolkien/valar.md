@@ -1,6 +1,6 @@
 # Valar and Valier: build notes
 
-This changelog records how the Valar section was assembled under `indic/global/myth/tolkien/valar`, including the content decisions, CMS conventions, corrections, and lessons from the file-driven workflow. The companion scripts and their usage notes are in [scripts/README.md](./scripts/README.md).
+This changelog records how the Valar section was assembled under `indic/global/myth/tolkien/valar`, including the content decisions, CMS conventions, corrections, and lessons from the file-driven workflow. The companion scripts and their usage notes are in the [scripts home page](./scripts/home.md).
 
 The finished section contains individual pages for the fourteen Valar and Valier, plus a `home.md` overview with the Valar table and artwork. The files are ordinary Markdown and TSV; the CMS supplies the navigation and page rendering.
 
@@ -30,9 +30,9 @@ The finished section contains individual pages for the fourteen Valar and Valier
 
 ## Script history and operating cautions
 
-The [script archive](./scripts/) contains the Valar generator, table builder, and encoding utilities. `generate_valar_utf8.ps1` is the encoding-corrected PowerShell variant; `generate_valar.py` is the Python generator. The older `generate_valar.ps1` is kept because it records the encoding failure, not because it should be run on the finished pages. It contains mojibake and currently fails PowerShell parsing.
+The [script archive](./scripts/) contains the Valar generator, table builder, and encoding utilities. [generate-valar-utf8--ps1.md](./scripts/generate-valar-utf8--ps1.md) is the encoding-corrected PowerShell variant; [generate-valar--py.md](./scripts/generate-valar--py.md) is the Python generator. [generate-valar--ps1.md](./scripts/generate-valar--ps1.md) is kept as an archival record of the encoding failure; it contains mojibake and is not recommended to run.
 
-`clean_valar_encoding.py` and `fix_valar_encoding.ps1` are repair utilities. `create_valar_table.py` rebuilds the overview, while `normalize_valar_tables.py` adds Markdown separator rows. That last behavior conflicts with the final house style, so do not run it on the finished content without changing and reviewing its output. The README documents the expected environment variables and the effects of each script.
+[clean-valar-encoding--py.md](./scripts/clean-valar-encoding--py.md) and [fix-valar-encoding--ps1.md](./scripts/fix-valar-encoding--ps1.md) document the repair utilities. [create-valar-table--py.md](./scripts/create-valar-table--py.md) rebuilds the overview, while [normalize-valar-tables--py.md](./scripts/normalize-valar-tables--py.md) adds Markdown separator rows. That last behavior conflicts with the final house style, so do not run it on the finished content unchanged. The README documents the expected environment variables and the effects of each listing.
 
 The initial Valar artwork helper scrapes search-page markup, pairs image URLs and artwork pages by their order in separate result lists, and suppresses request errors. Those links can be mismatched or incomplete; verify each one. The scripts are evidence of the workflow, not an immutable build pipeline. Several are historical generators that write directly into the live content directory and may replace hand-edited material. Make a backup, inspect the target directory, and run only one chosen generator when reproducing a step.
 

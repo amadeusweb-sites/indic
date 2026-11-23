@@ -1,6 +1,6 @@
 # Elves of the Silmarillion: build notes
 
-This changelog documents the inventory, hierarchy, article pass, and site-specific formatting for the Elf pages under `indic/global/myth/tolkien/elves`. It records the corrections and practical lessons as well as the final structure. The companion scripts and run cautions are in [scripts/README.md](./scripts/README.md).
+This changelog documents the inventory, hierarchy, article pass, and site-specific formatting for the Elf pages under `indic/global/myth/tolkien/elves`. It records the corrections and practical lessons as well as the final structure. The companion scripts and run cautions are in the [scripts home page](./scripts/home.md).
 
 The completed set contains 66 character pages, organized by kindred, with house subfolders only for the Noldor. Ten `home.md` files provide the hierarchy's landing points; the CMS supplies their listings, so those pages intentionally do not duplicate them with manual tables.
 
@@ -57,7 +57,7 @@ The distinction between manual and CMS-generated listings matters: the Valar `ho
 
 ## Validation and site check
 
-The final pass checked that the profile set numbered 66, each page had the heading separators, first-table marker, required fansite/search sections, and at least three numbered artwork links. It also checked that the ten index pages remained table-free. The repeatable validator is [validate_elf_articles.py](./scripts/validate_elf_articles.py).
+The final pass checked that the profile set numbered 66, each page had the heading separators, first-table marker, required fansite/search sections, and at least three numbered artwork links. It also checked that the ten index pages remained table-free. The repeatable validator is [validate-elf-articles--py.md](./scripts/validate-elf-articles--py.md).
 
 The public sitemap at [the Tolkien Elves listing](https://indic.missions.amadeusweb.in/sitemap/?at=global/myth/tolkien/elves) confirmed that the kindred and house hierarchy was visible through the CMS. A sitemap confirms discoverability and route structure; it cannot prove the accuracy of article content or that every remote artwork page remains available.
 
@@ -65,11 +65,11 @@ The public sitemap at [the Tolkien Elves listing](https://indic.missions.amadeus
 
 ## Script history and cautions
 
-The script archive includes the initial inventory creator, index/menu builder, article writer, fan-art collection and refinement stages, and validator. `build_elf_indexes.py` represents an earlier pass that wrote manual index tables; the current indexes must remain table-free. Treat it as historical unless that behavior is deliberately removed and reviewed.
+The script archive includes the initial inventory creator, index/menu builder, article writer, fan-art collection and refinement stages, and validator. [build-elf-indexes--py.md](./scripts/build-elf-indexes--py.md) represents an earlier pass that wrote manual index tables; the current indexes must remain table-free. Treat it as historical unless that behavior is deliberately removed and reviewed.
 
-`collect_elf_fanart_candidates.py` fetches public search-page markup and saves a temporary JSON result file beside itself. Its parser depends on the search site's HTML and can stop working when that site changes. `apply_elf_media.py` writes media sections into character pages, and `refine_elf_fanart.py` revises those tables. These scripts can overwrite editorial changes; back up the tree and inspect their output before using them.
+[collect-elf-fanart-candidates--py.md](./scripts/collect-elf-fanart-candidates--py.md) documents the public search-page collector, which saves a temporary JSON result file beside the extracted script. Its parser depends on the search site's HTML and can stop working when that site changes. [apply-elf-media--py.md](./scripts/apply-elf-media--py.md) documents the media writer, and [refine-elf-fanart--py.md](./scripts/refine-elf-fanart--py.md) the gallery refinement pass. These source listings can overwrite editorial changes; back up the tree and inspect their output before using them.
 
-The scripts have local absolute paths replaced with `TOLKIEN_ELVES_DIR` or `TOLKIEN_VALAR_DIR`. This makes the archive portable, but also means those variables must be set explicitly before running a script. Consult [scripts/README.md](./scripts/README.md) for the suggested order and the scripts that should not be rerun unchanged.
+The scripts have local absolute paths replaced with `TOLKIEN_ELVES_DIR` or `TOLKIEN_VALAR_DIR`. This makes the archive portable, but also means those variables must be set explicitly before running a script. Consult the [scripts home page](./scripts/home.md) for the suggested order and the scripts that should not be rerun unchanged.
 
 ---
 
