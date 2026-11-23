@@ -1,0 +1,21 @@
+#key	value
+name	Old Indic Wisdom
+byline	A DAWN Site
+year	2026
+
+|labels and messages
+iconName	Indic Spirituality
+siteMenuName	India Home
+description	Reclaiming Global Wisdom from the Old Indic / Pre Dark Ages
+welcome-message	This is a DAWN Site
+footer-message	DAWN
+
+|img and styles
+safeName	indic-wisdom	//NOTE: used in getLogoOr
+mediakit	?palette=default
+|fonts	cursive=Eagle+Lake&menu=Quintessential&menu-size=1.3rem
+
+|technical
+sections	global, dwapara, powers, Continents: asia+africa+middle-east+europe+america+australia, whois
+local-url	http://localhost/hub/missions/spirit/indic/
+live-url	https://indic.missions.amadeusweb.in/
