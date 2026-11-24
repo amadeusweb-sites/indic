@@ -1,0 +1,2 @@
+> NOTA BENE: This portion will be expanded on later when time permits JUSTBR
+> Until then, see [Nirnaeth Arnoediad](%url%myth/tolkien/fights/battles/nirnaeth-arnoediad/BTNPRIMARYNEWTAB) or [Dagor Bragollach](%url%myth/tolkien/fights/battles/BTNINFONEWTAB)
